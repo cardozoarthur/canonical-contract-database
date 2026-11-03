@@ -1,5 +1,9 @@
 [
   {
+    "path": ".gitattributes",
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
     "path": ".gitignore",
     "sha256": "a4f76e2d86b1ac42e839a7925b44e231cef071d629659b6aa69cd06a231cb553"
   },
