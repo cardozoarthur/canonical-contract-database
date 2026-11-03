@@ -601,15 +601,15 @@
   },
   {
     "path": "SECURITY.es.md",
-    "sha256": "6546c6bdb9074073148277005f1626a4f0e927d7104d3ceece544d5f5844a4bf"
+    "sha256": "c2cc8a8465e9bea976f14848cad56ec7aa3db0cb2ed92d44d59d350cefb051e4"
   },
   {
     "path": "SECURITY.md",
-    "sha256": "35e0679e8d9ed896b3740720d48fa657f1f6dc927d549d1825eaaf565ac3aaed"
+    "sha256": "1deb291e196b3e1fa5047112a7fb5dff312c13f067e24f55e32dc189d7d9ecf3"
   },
   {
     "path": "SECURITY.pt-BR.md",
-    "sha256": "5f359efea7e9064cfe05fac952eb478e7cace733fdb6e3b9d7f070b99e9c2f6c"
+    "sha256": "505f3082ae8f554130685810c1ee92810452525e9ddf65c925e976d5b27e4630"
   },
   {
     "path": "THIRD_PARTY.md",
