@@ -1,0 +1,19 @@
+[package]
+name = "canonical-views"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+canonical-core.workspace = true
+canonical-codec.workspace = true
+canonical-registry = { path = "../registry" }
+serde.workspace = true
+serde_json = "1"
+
+[dev-dependencies]
+tempfile.workspace = true
+canonical-query = { path = "../query" }
+canonical-relations = { path = "../relations" }
+canonical-storage = { path = "../storage" }

@@ -1,0 +1,73 @@
+[package]
+name = "canonical-functional-bench"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+publish = false
+
+[features]
+default = []
+memory-profile = ["canonical-storage/memory-profile", "canonical-registry/memory-profile", "canonical-query/memory-profile", "canonical-relations/memory-profile"]
+
+[[bin]]
+name = "memory-control"
+path = "src/bin/memory-control.rs"
+test = false
+
+[[bin]]
+name = "memory-profile"
+path = "src/bin/memory-profile.rs"
+required-features = ["memory-profile"]
+test = false
+
+[[bin]]
+name = "projection-bench"
+path = "src/bin/projection-bench.rs"
+test = false
+
+[[bin]]
+name = "index-policy-bench"
+path = "src/bin/index-policy-bench.rs"
+test = false
+
+[[bin]]
+name = "e15-bench"
+path = "src/bin/e15-bench.rs"
+test = false
+
+[[bin]]
+name = "e15-history-profile"
+path = "src/bin/e15-history-profile.rs"
+required-features = ["memory-profile"]
+test = false
+
+[dependencies]
+canonical-memory = { path = "../memory" }
+canonical-index = { path = "../index" }
+canonical-core.workspace = true
+canonical-codec.workspace = true
+canonical-storage = { path = "../storage" }
+canonical-registry = { path = "../registry" }
+canonical-query = { path = "../query" }
+canonical-relations = { path = "../relations" }
+canonical-views = { path = "../views" }
+serde.workspace = true
+serde_json = "1"
+rmp-serde = "1"
+prost = "0.14"
+rusqlite = { version = "0.37", features = ["bundled"] }
+sha2.workspace = true
+crc32fast.workspace = true
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61", features = ["Win32_System_ProcessStatus", "Win32_System_Threading"] }
+
+[[bin]]
+name = "public-history-probe"
+path = "src/bin/public-history-probe.rs"
+test = false
+
+
+[dev-dependencies]
+tempfile.workspace = true

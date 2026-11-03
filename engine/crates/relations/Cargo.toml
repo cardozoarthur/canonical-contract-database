@@ -1,0 +1,19 @@
+[package]
+name = "canonical-relations"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[features]
+default = []
+memory-profile = ["dep:canonical-memory", "canonical-query/memory-profile"]
+
+[dependencies]
+canonical-memory = { path = "../memory", optional = true }
+canonical-core.workspace = true
+canonical-registry = { path = "../registry" }
+canonical-query = { path = "../query" }
+
+[dev-dependencies]
+tempfile.workspace = true

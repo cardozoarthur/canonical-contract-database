@@ -1,0 +1,13 @@
+[package]
+name = "canonical-index"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+canonical-core.workspace = true
+crc32fast.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true

@@ -1,0 +1,20 @@
+[package]
+name = "canonical-storage"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[features]
+default = []
+memory-profile = ["dep:canonical-memory"]
+
+[dependencies]
+canonical-memory = { path = "../memory", optional = true }
+canonical-core.workspace = true
+canonical-codec.workspace = true
+fs2.workspace = true
+crc32fast.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true

@@ -1,0 +1,5 @@
+**/target/
+/demo-db/
+/demo-evidence/
+/demo-client/
+*.tmp

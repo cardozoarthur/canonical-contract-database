@@ -1,0 +1,25 @@
+[workspace]
+members = ["crates/core", "crates/codec", "crates/storage", "crates/registry", "crates/index", "crates/query", "crates/relations", "crates/views", "crates/bench", "crates/functional-bench", "crates/memory"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+authors = ["Arthur Gomes de Freitas Cardozo"]
+
+[workspace.dependencies]
+canonical-core = { path = "crates/core" }
+canonical-codec = { path = "crates/codec" }
+serde = { version = "1", features = ["derive"] }
+postcard = { version = "1", features = ["alloc"] }
+crc32fast = "1"
+fs2 = "0.4"
+tempfile = "3"
+getrandom = "0.4"
+sha2 = "0.10"
+
+# Workspace release binaries; embedding applications control their own profiles.
+[profile.release]
+lto = "thin"
+codegen-units = 1

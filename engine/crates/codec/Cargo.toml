@@ -1,0 +1,16 @@
+[package]
+name = "canonical-codec"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+canonical-core.workspace = true
+crc32fast.workspace = true
+serde.workspace = true
+postcard.workspace = true
+
+[dev-dependencies]
+serde_json = "1"
+rmp-serde = "1"
